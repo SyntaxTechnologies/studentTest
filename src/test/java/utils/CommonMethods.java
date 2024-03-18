@@ -52,18 +52,7 @@ public class CommonMethods extends PageInitializer {
         element.clear();
         element.sendKeys(text);
     }
-    public void selectFromDropDown(WebElement dropDown, String visibleText){
-        Select sel =new Select(dropDown);
-        sel.selectByVisibleText(visibleText);
-    }
-    public void selectFromDropDown(String value, WebElement dropDown ){
-        Select sel =new Select(dropDown);
-        sel.selectByValue(value);
-    }
-    public void selectFromDropDown( WebElement dropDown,int index ){
-        Select sel =new Select(dropDown);
-        sel.selectByIndex(index);
-    }
+
 
 
     public WebDriverWait getwait(){
@@ -82,13 +71,8 @@ public class CommonMethods extends PageInitializer {
     }
 
 
-    public JavascriptExecutor getJSExecutor() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        return js;
-    }
-    public void jsClick(WebElement element) {
-        getJSExecutor().executeScript("arguments[0].click();", element);
-    }
+
+
     public String getTimeStamp(String pattern){
         //this method will return the timestamp which we will add in ss method
         Date date = new Date();
